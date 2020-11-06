@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#clickMe").click(function(){
+				alert("Oops! 不小心讓button掉下去了。F5恢復button。");
+				$(this).addClass("animated hinge");	
+			});
+		});
+	</script>
+
 	<style type="text/css">
 	
 		.background{
@@ -67,6 +77,29 @@
 			
 			border-radius: 50%;
 		}
+		
+		.blue-box{
+			background-color: rgb(162, 229, 251);
+			
+			position: absolute;
+			top: 68%;
+			left: 15%;
+			
+			padding-top: 30px;
+			padding-right: 30px;
+			padding-bottom: 30px;
+			padding-left: 30px;
+			
+			border-radius: 50%;
+		}
+		
+		
+		.transparent-button{
+			background-color: transparent;
+			
+			border-color: black;
+			border-radius: 10%
+		}
 
 		h1{
 			font-family: fantasy, 微軟正黑體;
@@ -77,6 +110,10 @@
 		p{
 			font-family: fantasy, 微軟正黑體;
 			color: black;
+		}
+		
+		button{
+			font-family: fantasy, 微軟正黑體;
 		}
 		
 		a:link{
@@ -98,6 +135,7 @@
 
 	<html>
 		<head>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css">
 			<title>Lab-3 406261262</title>
 			<meta name="description" content="這個個人網站可以更讓你了解我">
 			<meta name="keywords" content="陳楷婷">
@@ -118,14 +156,20 @@
 			</div>	
 			<div class="box red-box">
 				<p style="font-weight: bold;">
-					<a href="https://sls.weco.net/taxonomy/term/2484">點這裡</a>
+					<a href="https://sls.weco.net/taxonomy/term/2484" id="clickHere">點這裡</a>
 					可以回到宅學習[F20_WebFund] Lab3
 				</p>
 			</div>
 			<div class="box yellow-box">
 				<p style="font-size: 1cm;">
-					<a href="https://www.facebook.com/groups/137944869554367">FACEBOOK</a>
+					<a href="https://www.facebook.com/groups/137944869554367" id="facebook">FACEBOOK</a>
 				</p>
+			</div>
+			<div class="box blue-box">
+				<p>
+					<button href="#" id="clickMe" class="transparent-button">Click me</button>
+				</p> 
+				<p>to show jQuery</p>
 			</div>
 		</body>
 	</html>
